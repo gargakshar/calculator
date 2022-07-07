@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+       <form action="" name="calc">
+    <input class="btn" type="text" value="" name="answer" id="ans"><br></br>
+    <input class="btn" type="button" value="1" onclick="calc.answer.value += '1'">
+    <input class="btn" type="button" value="2" onclick="calc.answer.value += '2'">
+    <input class="btn" type="button" value="3" onclick="calc.answer.value += '3'">
+    <br></br>
+    <input class="btn" type="button" value="4" onclick="calc.answer.value += '4'">
+    <input class="btn" type="button" value="5" onclick="calc.answer.value += '5'">
+    <input class="btn" type="button" value="6" onclick="calc.answer.value += '6'">
+    <br></br>
+    <input class="btn" type="button" value="7" onclick="calc.answer.value += '7'">
+    <input class="btn" type="button" value="8" onclick="calc.answer.value += '8'">
+    <input class="btn" type="button" value="9" onclick="calc.answer.value += '9'">
+    <br></br>
+    
+    <input class="btn" type="button" value="+" onclick="calc.answer.value += '+'">
+    <input class="btn" type="button" value="0" onclick="calc.answer.value += '0'">
+    <input class="btn" type="button" value="-" onclick="calc.answer.value += '-'">
+    <br></br>
+    <input class="btn" type="button" value="/" onclick="calc.answer.value += '/'">
+    <input class="btn" type="button" value="*" onclick="calc.answer.value += '*'">
+    <input class="btn" type="button" value="=" onclick="calc.answer.value = eval(calc.answer.value)">
+    <br></br>
+    <input id="btnc" class="btn" type="button" value="clear All" onclick="calc.answer.value = ''">
+    <input id="btnb" class="btn" type="button" value="back" onclick="back()">
+       </form>
+    </div>
+       <script>
+           function back(){
+             var n = document.getElementById("ans").value;
+             var str=n.toString();
+             str=str.substr(0,str.length-1)
+            document.getElementById("ans").value=str;
+           }
+       </script>
+    </body>
+</html>
